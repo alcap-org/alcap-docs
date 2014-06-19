@@ -302,9 +302,9 @@ to our livetime histogram). The noise was bad.
 \subsection{Conclusions}
 
 Thresholds were adjusted several times during this data set, most noticeably during the beginning.
-It has been suggested we split the dataset at 2880. If both parts of the dataset give us the same physics results, 
+We should split the dataset at 2880.
 
-The final run (3012) can be excluded if we want.
+The final run (3012) should be excluded.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -518,25 +518,6 @@ Keep all other runs, but look into the issues just in case.
 \end{itemize}
 
 \subsection{Issues}
-\subsubsection{S1R1-F and SiL1-F muScTDiff peak weak}
-
-The peak in the muScTDiff plot is weaker for the first ~15 runs for the thick slow silicon channels. This
-is odd because their slow channel rates are actually higher. See \ref{fig:al50b_rates}.
-
-\begin{figure}
-  \centering
-  \begin{subfigure}{0.5\textwidth}
-    \includegraphics[width=0.9\linewidth]{figs/al50b/rates}
-  \end{subfigure}%
-  \begin{subfigure}{0.5\textwidth}
-    \includegraphics[width=0.0\linewidth]{figs/al50b/sil2f_tdiff}
-  \end{subfigure}
-  \caption{The rates for SiR2-S and SiL2-S are higher according to the rate plot on the left;
-    hoewver on the right we cannot see the peak in the timing correlation because of
-    seemingly poor statistics.}
-\end{figure}
-
-
 \subsubsection{Peak in Amplitude Histograms}
 
 There is a peak in the SiL1-f-S amplitude plot that appears in many datasets, but has
@@ -577,6 +558,21 @@ However, if we look at a timestamp distribution like in \ref{fig:al50b_gef_times
 see that the normalized rates are higher in many detectors. This run was ~3 times longer
 than a normal run.
 
+\begin{figure}
+  \centering
+  \begin{subfigure}{0.5\textwidth}
+    \includegraphics[width=0.9\linewidth]{figs/al50b/rates}
+    \caption{}\label{fig:al50b_rates}
+  \end{subfigure}%
+  \begin{subfigure}{0.5\textwidth}
+    \includegraphics[width=0.9\linewidth]{figs/al50b/gef_timestamps}
+    \caption{}\label{fig:al50b_gef_timestamps}
+  \end{subfigure}
+  \caption{The rates on the left for the muSc look lower for run 3612, however the timestamp distribution in certain
+    detectors, for instance the GeF on the right, looks \emph{higher}.}
+  \label{fig:al50b_3612}
+\end{figure}
+
 
 \subsection{Conclusion}
 
@@ -595,6 +591,90 @@ Toss out runs 3732 and 3612. Look into these issues.
     2091-2103, 2119-2172
 \end{itemize}
 
+\subsection{Issues}
+\subsubsection{Results of SiR being in target position}
+As  result of being in the beam, two features stand out here in the SiR detectors not present
+in other data sets, and they can be seen in figure \ref{fig:sir_inbeam}. The amplitudes
+are bimodal around 0 and the beam muon beam energy, and the SiR detector had very few hits.
+
+\begin{figure}
+  \centering
+  \begin{subfigure}{0.5\textwidth}
+    \includegraphics[width=0.9\linewidth]{figs/sir/rates}
+  \end{subfigure}%
+  \begin{subfigure}{0.5\textwidth}
+    \includegraphics[width=0.9\linewidth]{figs/sir/sir_amp}
+  \end{subfigure}
+  \caption{As a result of being in the target position, the SiR detector had very few hits in
+    its thin component, and the amplitude distribution for the thick component had a peak
+    corresponding to the beam energy.}
+  \label{fig:sir_inbeam}
+\end{figure}
+
+
+\subsubsection{LiquidSc behavior different in first part of run}
+\label{sec:lqsc_setup}
+One very noticeable feature in the pedestal plot is that the LiquidSc has a zero pedestal for the first ``tranche''. It is, actually, the only feature of the entire plot.
+Additionally it seems all plots have the LiquidSc missing from their first tranche, perhaps because it was not setup.
+This can be seen in figure \ref{fig:sir_lqcd_setup}
+
+\begin{figure}
+  \centering
+  \begin{subfigure}{0.5\textwidth}
+    \includegraphics[width=0.9\linewidth]{figs/sir/pedestals}
+  \end{subfigure}%
+  \begin{subfigure}{0.5\textwidth}
+    \includegraphics[width=0.9\linewidth]{figs/sir/lqsc_tdiff}
+  \end{subfigure}
+  \caption{The LiquidSc may not have been setup for the first tranche, leading to the above
+    behavior. It there could have been a problem. Either way, somewhere in the deadtime something
+    changed.}
+  \label{fig:sir_lqcd_setup}
+\end{figure}
+
+
+\subsubsection{GeS Timing}
+The first tranche was right around the time we were first setting up the germanium detector, and as a result there were a couple of issues.
+Firs the time stamp distribution as seen in the left plot of \ref{fig:sir_ges_timestamps} ends too early. This is a result of the ODB
+having the incorrect sampling frequency for this detector, and has since been solved as seen in \issue{45}.
+
+Perhaps related, the right plot of \ref{fig:sir_ges_timestamps} shows that in the first tranche the timestamp distributions did not
+have a peak. Whether or not this problem persists since the fix above has not been followed up on.
+
+\begin{figure}
+  \centering
+  \begin{subfigure}{0.5\textwidth}
+    \includegraphics[width=0.9\linewidth]{figs/sir/ges_timestamp.png}
+  \end{subfigure}%
+  \begin{subfigure}{0.5\textwidth}
+    \includegraphics[width=0.9\linewidth]{figs/sir/ges_tdiff}
+  \end{subfigure}
+  \caption{On the left we see a problematic timestamp distribution, which has since been solved in \issue{45}.
+    On the right we see a lack of a peak in the first tranche, and whether or not this problem persists has not
+    been followed up on.}
+  \label{fig:sir_ges_timestamps}
+\end{figure}
+
+
+\subsubsection{GeF Length Banding}
+\label{sec:sir_gefbands}
+There were quite a few peaks in the GeF length distribution, as seen in \ref{fig:sir_gef_length}.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.9\textwidth]{figs/sir/gef_length}
+  \caption{The peaks in the length distribution of the GeF pulses
+    are not understood.}
+  \label{fig:sir_gef_length}
+\end{figure}
+
+
+\subsection{Conclusions}
+
+Separate the first and second tranche into different datasets. If the issue in section \ref{sec:sir_gefbands}
+goes away, maybe keep them together.
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{SiR2 - 1\%}
@@ -606,6 +686,25 @@ Toss out runs 3732 and 3612. Look into these issues.
   \item Runs:
     3771, 3773-3779
 \end{itemize}
+
+\subsection{Issues}
+\subsubsection{Missing SiL1-2-F}
+\label{sec:sir1pct_missing_det}
+This detector seems to have been disconnected. There is evidence of this all over the place, but only the rates plot is
+presented in \ref{fig:sir1pct_rates}.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.9\textwidth]{figs/sir1pct/rates}
+  \caption{This is presented just to show the absence of SiL1-2-F during this dataset.}
+  \label{fig:sir1pct_rates}
+\end{figure}
+
+
+\subsection{Conclusions}
+This data set is too small for there too really be any issues with it yet.
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{SiR2 - 3\%}
 \begin{itemize}
@@ -616,6 +715,20 @@ Toss out runs 3732 and 3612. Look into these issues.
   \item Runs:
     3763-3770
 \end{itemize}
+
+
+\subsection{Issues}
+\subsubsection{Missing SiL1-2-F}
+See \ref{sec:sir1pct_missing_det} and figure \ref{fig:sir3pct_rates} for the evidence for this dataset.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.9\textwidth]{figs/sir3pct/rates}
+  \caption{This is presented just to show the absence of SiL1-2-F during this dataset.}
+  \label{fig:sir3pct_rates}
+\end{figure}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Si16P}
 \begin{itemize}
@@ -628,5 +741,40 @@ Toss out runs 3732 and 3612. Look into these issues.
 \end{itemize}
 
 
+\subsection{Issues}
+\subsubsection{Noisy SiL1-2-F}
+The noise in this channel was off the charts, or at the edge of the charts, as seen
+in figure \ref{fig:si16p_noise}.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=0.9\textwidth]{figs/si16p/noise}
+  \caption{The noise in the SiL1-2-F completely drowns out the noise in the other detectors on this plot.}
+  \label{fig:si16p_noise}
+\end{figure}
+
+
+\subsubsection{Runs with Higher Rates}
+There are four runs that stand out quite a bit in some time stamp distribution plots, two examples of these plots can
+be found in \ref{fig:si16p_funnyruns}. The runs are 3480, 3481, 3486, and 3487. The duration of these last two runs is
+higher. This should be looked into.
+
+\begin{figure}
+  \centering
+  \begin{subfigure}{0.5\textwidth}
+    \includegraphics[width=0.9\linewidth]{figs/si16p/sil2s_timestamp}
+  \end{subfigure}%
+  \begin{subfigure}{0.5\textwidth}
+    \includegraphics[width=0.9\linewidth]{figs/si16p/sir13s_timestamp}
+  \end{subfigure}
+  \caption{Runs 3480, 3481, 3486, and 3487 seem to have higher rates, even normalized to the number of entering muons.}
+  \label{fig:si16p_funnyruns}
+\end{figure}
+
+
+\subsection{Conclusions}
+
+Nothing should be cut out, as after a glance it seems like maybe the four runs pointed out in the last section are okay.
+But this should be looked into.
 
 \end{document}
