@@ -69,19 +69,19 @@ had some consequences in its amplitudes plot \ref{fig:al100_ndet_amps}.
 \begin{figure}
   \centering
   \begin{subfigure}{0.4\textwidth}
-    \includegraphics[width=\linewidth]{figs/al100/cabu_thresh}
+    \includegraphics[width=\linewidth]{figs/data_quality_figs_Al100/hDQ_DAQThresholds_muSc_CaBU_TrendPlot}
     \caption{}\label{fig:al100_cabu_thresh}
   \end{subfigure}%
   \begin{subfigure}{0.4\textwidth}
-    \includegraphics[width=\linewidth]{figs/al100/cbbu_thresh}
+    \includegraphics[width=\linewidth]{figs/data_quality_figs_Al100/hDQ_DAQThresholds_muScA_CbBU_TrendPlot}
     \caption{}\label{fig:al100_cbbu_thresh}
   \end{subfigure}
   \begin{subfigure}{0.4\textwidth}
-    \includegraphics[width=\linewidth]{figs/al100/ccbu_thresh}
+    \includegraphics[width=\linewidth]{figs/data_quality_figs_Al100/hDQ_DAQThresholds_NDet_CcBU_TrendPlot}
     \caption{}\label{fig:al100_ccbu_thresh}
   \end{subfigure}%
   \begin{subfigure}{0.4\textwidth}
-    \includegraphics[width=\linewidth]{figs/al100/ndet_amp}
+    \includegraphics[width=\linewidth]{figs/data_quality_figs_Al100/hDQ_IslandAmplitude_NDet_CcBU_TrendPlot}
     \caption{}\label{fig:al100_ndet_amps}
   \end{subfigure}
   \caption{BU CAEN thresholds changed near the first runs of the Al100 dataset \ref{fig:al100_cabu_thresh}-\ref{fig:al100_ccbu_thresh}
@@ -102,23 +102,23 @@ be seen in \ref{fig:al100_sir11s_amps}.
 \begin{figure}
   \centering
   \begin{subfigure}{0.5\textwidth}
-    \includegraphics[width=0.8\linewidth]{figs/al100/sil11s_thresh}
+    \includegraphics[width=0.8\linewidth]{figs/data_quality_figs_Al100/hDQ_DAQThresholds_SiL1-1-S_Na82_TrendPlot}
     \caption{}\label{fig:al100_sil11s_thresh}
   \end{subfigure}%
   \begin{subfigure}{0.5\textwidth}
-    \includegraphics[width=0.8\linewidth]{figs/al100/sil13s_thresh}
+    \includegraphics[width=0.8\linewidth]{figs/data_quality_figs_Al100/hDQ_DAQThresholds_SiL1-3-S_Nc82_TrendPlot}
     \caption{}\label{fig:al100_sil13s_thresh}
   \end{subfigure}
   \begin{subfigure}{0.5\textwidth}
-    \includegraphics[width=0.8\linewidth]{figs/al100/sil12f_thresh}
+    \includegraphics[width=0.8\linewidth]{figs/data_quality_figs_Al100/hDQ_DAQThresholds_SiL1-2-F_Nd81_TrendPlot}
     \caption{}\label{fig:al100_sil12f_thresh}
   \end{subfigure}%
   \begin{subfigure}{0.5\textwidth}
-    \includegraphics[width=0.8\linewidth]{figs/al100/sil13f_thresh}
+    \includegraphics[width=0.8\linewidth]{figs/data_quality_figs_Al100/hDQ_DAQThresholds_SiL1-3-F_Ne81_TrendPlot}
     \caption{}\label{fig:al100_sil13f_thresh}
   \end{subfigure}
   \begin{subfigure}{0.5\textwidth}
-    \includegraphics[width=0.8\linewidth]{figs/al100/sir11s_thresh}
+    \includegraphics[width=0.8\linewidth]{figs/data_quality_figs_Al100/hDQ_DAQThresholds_SiR1-1-S_Ne82_TrendPlot}
     \caption{}\label{fig:al100_sir11s_thresh}
   \end{subfigure}
   \caption{Examples of thresholds in silicon channels that were changed between runs to
@@ -129,14 +129,14 @@ be seen in \ref{fig:al100_sir11s_amps}.
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.9\linewidth]{figs/al100/rates}
+  \includegraphics[width=0.9\linewidth]{figs/data_quality_figs_Al100/hDQ_IslandRate_TrendPlot}
   \caption{Rates in all detectors for Al100 dataset.}
   \label{fig:al100_rates}
 \end{figure}
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.9\linewidth]{figs/al100/sir11s_amps}
+  \includegraphics[width=0.9\linewidth]{figs/data_quality_figs_Al100/hDQ_IslandAmplitude_SiR1-1-S_Ne82_TrendPlot}
   \caption{An example of how the amplitudes changes after the thresholds
     were adjusted after run 2873.}
   \label{fig:al100_sir11s_amps}
@@ -152,7 +152,7 @@ is that we had many data from the beginning of any given event as illustrated in
 \ref{fig:al100_scve_timestamps}.
 
 \begin{figure}
-  \includegraphics[width=0.9\linewidth]{figs/al100/buffer_overflow}
+  \includegraphics[width=0.9\linewidth]{figs/data_quality_figs_Al100/hDQ_FADCBufferOverflow_Fraction_TrendPlot}
   \caption{FADC 0x83 had 100\% buffer overflow
     for the entirety of the dataset. FADC 0x81 had 100\% buffer overflow when
     issues with certain detectors started popping up.}
@@ -160,14 +160,9 @@ is that we had many data from the beginning of any given event as illustrated in
 \end{figure}
 
 \begin{figure}
-  \begin{subfigure}{0.5\textwidth}
-    \includegraphics[width=0.9\linewidth]{figs/al100/scve_timestamps}
-  \end{subfigure}%
-  \begin{subfigure}{0.5\textwidth}
-    \includegraphics[width=0.9\linewidth]{figs/al100/scve_timestamps_zoom}
-  \end{subfigure}
-  \caption{On the left we see the timestamp distribution for the ScVe detector,
-    and if we zoom in on the right we see the MIDAS events were very front-loaded
+  \includegraphics[width=0.9\linewidth]{figs/data_quality_figs_Al100/hDQ_IslandTimestamp_ScVe_Nd83_TrendPlot}
+  \caption{We see the timestamp distribution for the ScVe detector,
+    and if we were to zoom in on the x-axis we would see the MIDAS events were very front-loaded
     as the data buffer on FADC 0x83 filled up at the beginning of an event.
     One has to squint to be sure, but it is dark red near the horizontal axis.}
   \label{fig:al100_scve_timestamps}
@@ -184,10 +179,10 @@ The reason for this is unknown, and it is being investigated.
 
 \begin{figure}
   \begin{subfigure}{0.5\textwidth}
-    \includegraphics[width=0.9\linewidth]{figs/al100/sil12f_n}
+    \includegraphics[width=0.9\linewidth]{figs/data_quality_figs_Al100/hDQ_IslandCounter_SiL1-2-F_Nd81_TrendPlot}
   \end{subfigure}%
   \begin{subfigure}{0.5\textwidth}
-    \includegraphics[width=0.9\linewidth]{figs/al100/sil12s_n}
+    \includegraphics[width=0.9\linewidth]{figs/data_quality_figs_Al100/hDQ_IslandCounter_SiL1-2-S_Nb82_TrendPlot}
   \end{subfigure}
   \caption{Number of TPIs from SiL1-2 both fast and slow channels. There
     was a drastic increase afer run 2963.}
@@ -203,7 +198,7 @@ In practice we've tended to not concern outselve too much if this is below 10\%,
 happens after the thresholds have been adjusted.
 
 \begin{figure}
-  \includegraphics[width=0.9\linewidth]{figs/al100/packet_loss}
+  \includegraphics[width=0.9\linewidth]{figs/data_quality_figs_Al100/hDQ_FADCPacketLoss_Fraction_TrendPlot}
   \caption{Packet loss becomes noticeably higher after the thresholds get adjusted for
     FADC 0x82.}
   \label{fig:al100_packet_loss}
@@ -218,7 +213,7 @@ this could mean that during the downtime something happened to the beam (it did 
 several times during the remainder of the data set). This can be seen in figure \ref{fig:al100_musc_rate}.
 
 \begin{figure}
-  \includegraphics[width=0.9\linewidth]{figs/al100/musc_rate}
+  \includegraphics[width=0.9\linewidth]{figs/data_quality_figs_Al100/hDQ_TDCCheck_muSc_rate_TrendPlot}
   \caption{In the latter half of this data set, one might
     observe the rate in the muSc to be less consistent. Though
     the exact magnitude of the fluctuations is difficult
@@ -238,10 +233,10 @@ seen in \ref{fig:al100_ge_noise}.
 
 \begin{figure}
   \begin{subfigure}{0.5\textwidth}
-    \includegraphics[width=0.9\linewidth]{figs/al100/ges_length}
+    \includegraphics[width=0.9\linewidth]{figs/data_quality_figs_Al100/hDQ_IslandLength_Ge-S_CaUH_TrendPlot}
   \end{subfigure}%
   \begin{subfigure}{0.5\textwidth}
-    \includegraphics[width=0.9\linewidth]{figs/al100/ges_n}
+    \includegraphics[width=0.9\linewidth]{figs/data_quality_figs_Al100/hDQ_IslandCounter_Ge-S_CaUH_TrendPlot}
   \end{subfigure}
   \caption{The noise in the germanium for the later half
     of the dataset can be seen here. On the left we see a drastic
@@ -261,7 +256,7 @@ had interesting behavior like this, but less frequently. Additionally, the pedes
 for this channel were different than for other channels on the same board.
 
 \begin{figure}
-  \includegraphics[width=0.9\linewidth]{figs/al100/sil12f_amp}
+  \includegraphics[width=0.9\linewidth]{figs/data_quality_figs_Al100/hDQ_IslandAmplitude_SiL1-2-F_Nd81_TrendPlot}
   \caption{There is something funny going on with the amplitudes of this channel.
     The pedestal for this channel is also different than the other 0x81 channels.}
   \label{fig:al100_sil12f_amps}
@@ -278,10 +273,10 @@ we have not been able to identify the source of.
 \begin{figure}
   \centering
   \begin{subfigure}{0.5\textwidth}
-    \includegraphics[width=0.9\linewidth]{figs/al100/sil12s_timestamps}
+    \includegraphics[width=0.9\linewidth]{figs/data_quality_figs_Al100/hDQ_IslandTimestamp_SiL1-2-S_Nb82_TrendPlot}
   \end{subfigure}%
   \begin{subfigure}{0.5\textwidth}
-    \includegraphics[width=0.9\linewidth]{figs/al100/ges_timestamps}
+    \includegraphics[width=0.9\linewidth]{figs/data_quality_figs_Al100/hDQ_IslandTimestamp_Ge-S_CaUH_TrendPlot}
   \end{subfigure}
   \caption{On the left we can see some bands in the time distribution
     of SiL-1-2-S hits with respect to the start of a MIDAS event. It's
@@ -327,7 +322,7 @@ this has not been explained yet either.
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.9\linewidth]{figs/al50andet2/rates}
+  \includegraphics[width=0.9\linewidth]{figs/data_quality_figs_Al50a_with-NDet2/hDQ_IslandRate_TrendPlot}
   \caption{Rates are low (~0) for some detectors.}
   \label{fig:al50andet2_rates}
 \end{figure}
@@ -342,16 +337,16 @@ can be seen in \ref{fig:al50andet2_amps}.
 \begin{figure}
   \centering
   \begin{subfigure}{0.5\textwidth}
-    \includegraphics[width=0.9\linewidth]{figs/al50andet2/musc_amp}
+    \includegraphics[width=0.9\linewidth]{figs/data_quality_figs_Al50a_with-NDet2/hDQ_IslandAmplitude_muSc_CaBU_TrendPlot}
   \end{subfigure}%
   \begin{subfigure}{0.5\textwidth}
-    \includegraphics[width=0.9\linewidth]{figs/al50andet2/sil13f_amp}
+    \includegraphics[width=0.9\linewidth]{figs/data_quality_figs_Al50a_with-NDet2/hDQ_IslandAmplitude_SiL1-3-F_Nc83_TrendPlot}
   \end{subfigure}
   \begin{subfigure}{0.5\textwidth}
-    \includegraphics[width=0.9\linewidth]{figs/al50andet2/sil2f_amp}
+    \includegraphics[width=0.9\linewidth]{figs/data_quality_figs_Al50a_with-NDet2/hDQ_IslandAmplitude_SiL1-2-F_Nb83_TrendPlot}
   \end{subfigure}%
   \begin{subfigure}{0.5\textwidth}
-    \includegraphics[width=0.9\linewidth]{figs/al50andet2/sir2f_amp}
+    \includegraphics[width=0.9\linewidth]{figs/data_quality_figs_Al50a_with-NDet2/hDQ_IslandAmplitude_SiR2-F_Nb81_TrendPlot}
   \end{subfigure}
   \caption{The first two runs show interesting amplitude cutoffs for some detectors.}
   \label{fig:al50andet2_amps}
@@ -366,7 +361,7 @@ This should be examined.
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.9\linewidth]{figs/al50andet2/sil13f_length}
+  \includegraphics[width=0.9\linewidth]{figs/data_quality_figs_Al50a_with-NDet2/hDQ_IslandLength_SiL1-3-F_Nc83_TrendPlot}
   \caption{The island lengths seem to go close to zero, and this should not be possible}
   \label{fig:al50andet2_length}
 \end{figure}
@@ -405,17 +400,17 @@ are consistent throughout the entire dataset, giving it a feeling of normalcy. H
 \begin{figure}
   \centering
   \begin{subfigure}{0.5\textwidth}
-    \includegraphics[width=0.9\linewidth]{figs/al50a/sil2f_length}
+    \includegraphics[width=0.9\linewidth]{figs/data_quality_figs_Al50a_without-NDet2/hDQ_IslandLength_SiL2-F_Na81_TrendPlot}
   \end{subfigure}%
   \begin{subfigure}{0.5\textwidth}
-    \includegraphics[width=0.9\linewidth]{figs/al50a/sil11f_length}
+    \includegraphics[width=0.9\linewidth]{figs/data_quality_figs_Al50a_without-NDet2/hDQ_IslandLength_SiL1-1-F_Na83_TrendPlot}
   \end{subfigure}
 
   \begin{subfigure}{0.5\textwidth}
-    \includegraphics[width=0.9\linewidth]{figs/al50a/sir2f_length}
+    \includegraphics[width=0.9\linewidth]{figs/data_quality_figs_Al50a_without-NDet2/hDQ_IslandLength_SiR2-F_Nb81_TrendPlot}
   \end{subfigure}%
   \begin{subfigure}{0.5\textwidth}
-    \includegraphics[width=0.9\linewidth]{figs/al50a/sir12f_length}
+    \includegraphics[width=0.9\linewidth]{figs/data_quality_figs_Al50a_without-NDet2/hDQ_IslandLength_SiR1-2-F_Nf83_TrendPlot}
   \end{subfigure}
   \caption{An example of how, for some of the runs, the pulse island lengths could vary quite a bit.}
   \label{fig:al50a_erratic_lengths}
@@ -423,10 +418,11 @@ are consistent throughout the entire dataset, giving it a feeling of normalcy. H
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.9\linewidth]{figs/al50a/sir14s_length}
+  \includegraphics[width=0.9\linewidth]{figs/data_quality_figs_Al50a_without-NDet2/hDQ_IslandLength_SiR1-4-S_Nh82_TrendPlot}
   \caption{Instead of being erratic, some pulse island lengths are consistently less than what we'd expect.}
   \label{fig:al50a_consistent_bad_lengths}
 \end{figure}
+
 
 \subsubsection{Pulse Island Length Banding}
 \label{sec:al50a_tpi_length_bands}
@@ -434,18 +430,12 @@ One can additionally see that the pulse island lengths in \ref{fig:al50a_erratic
 bunch up. This could be because the atom in the FADC settings are ``stretch samples'' which are, in fact, two samples.
 But this has not been confirmed.
 
+
 \subsubsection{Pulse Amplitudes Too Low}
 \label{sec:al50a_tpi_amp}
-An example and explanation of the problem can be found in \ref{fig:al50a_amp_below_thresh}. The problem is that pulse islands
+The problem is that pulse islands
 were having amplitudes computed that were below the trigger threshold. This shouldn't happen, and it was found to be
 a pedestal-subtraction problem. This is better documented in \issue{92}.
-
-\begin{figure}
-  \centering
-  \includegraphics[width=0.9\linewidth]{figs/al50a/amplitude_too_low}
-  \caption{The problem is best described in the figure. It has been dealt with in \issue{92}.}
-  \label{fig:al50a_amp_below_thresh}
-\end{figure}
 
 
 \subsubsection{Pedestals Zero for Run 3257}
@@ -455,7 +445,7 @@ why this happened. But the runs immediately after this (not included in the data
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.9\linewidth]{figs/al50a/ped}
+  \includegraphics[width=0.9\linewidth]{figs/data_quality_figs_Al50a_without-NDet2/hDQ_DAQPulseShapes_Pedestals_TrendPlot}
   \caption{Attention to the vertical band at 3257, where the pedestals drop inexplicably.}
   \label{fig:al50a_ped}
 \end{figure}
@@ -472,7 +462,7 @@ can be seen in \ref{fig:al50a_overflow}.
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.9\linewidth]{figs/al50a/rates.png}
+  \includegraphics[width=0.9\linewidth]{figs/data_quality_figs_Al50a_without-NDet2/hDQ_IslandRate_TrendPlot}
   \caption{The rates drop due to a crate crash in run 3117, the fast silicon rates are incocnsistent for runs 3183-3257.}
   \label{fig:al50a_rates}
 \end{figure}
@@ -480,10 +470,10 @@ can be seen in \ref{fig:al50a_overflow}.
 \begin{figure}
   \centering
   \begin{subfigure}{0.5\textwidth}
-    \includegraphics[width=0.9\linewidth]{figs/al50a/sil14f_timestamps}
+    \includegraphics[width=0.9\linewidth]{figs/data_quality_figs_Al50a_without-NDet2/hDQ_IslandTimestamp_SiL1-4-F_Nd83_TrendPlot}
   \end{subfigure}%
   \begin{subfigure}{0.5\textwidth}
-    \includegraphics[width=0.9\linewidth]{figs/al50a/buffer_overflow}
+    \includegraphics[width=0.9\linewidth]{figs/data_quality_figs_Al50a_without-NDet2/hDQ_FADCBufferOverflow_Fraction_TrendPlot}
   \end{subfigure}
   \caption{The buffer buffer's overflowing and signature timestamp bunching for a small fraction of the runs.}
   \label{fig:al50a_overflow}
@@ -525,7 +515,7 @@ thusfar been uncharacterized. See \ref{fig:sil14s_amp}.
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.9\linewidth]{figs/al50b/sil14s_amp}
+  \includegraphics[width=0.9\linewidth]{figs/data_quality_figs_Al50b/hDQ_IslandAmplitude_SiL1-4-S_Nd82_TrendPlot}
   \caption{Around vertical 600 you can see what appears to be a band,
     suggesting for some reason pulses tend to have an amplitude of this.
     This has not been investigated yet.}
@@ -545,7 +535,7 @@ The noise really spikes up in later runs in SiL2-S and SiR2-S, which can be seen
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.9\textwidth]{figs/al50b/noise}
+  \includegraphics[width=0.9\textwidth]{figs/data_quality_figs_Al50b/hDQ_DAQPulseShapes_Noises_TrendPlot}
   \caption{The noise in the thick silicon detectors picks up near the end of this dataset.}
   \label{fig:al50b_noise}
 \end{figure}
@@ -561,11 +551,11 @@ than a normal run.
 \begin{figure}
   \centering
   \begin{subfigure}{0.5\textwidth}
-    \includegraphics[width=0.9\linewidth]{figs/al50b/rates}
+    \includegraphics[width=0.9\linewidth]{figs/data_quality_figs_Al50b/hDQ_IslandRate_TrendPlot}
     \caption{}\label{fig:al50b_rates}
   \end{subfigure}%
   \begin{subfigure}{0.5\textwidth}
-    \includegraphics[width=0.9\linewidth]{figs/al50b/gef_timestamps}
+    \includegraphics[width=0.9\linewidth]{figs/data_quality_figs_Al50b/hDQ_IslandTimestamp_Ge-F_CbUH_TrendPlot}
     \caption{}\label{fig:al50b_gef_timestamps}
   \end{subfigure}
   \caption{The rates on the left for the muSc look lower for run 3612, however the timestamp distribution in certain
@@ -600,10 +590,10 @@ are bimodal around 0 and the beam muon beam energy, and the SiR detector had ver
 \begin{figure}
   \centering
   \begin{subfigure}{0.5\textwidth}
-    \includegraphics[width=0.9\linewidth]{figs/sir/rates}
+    \includegraphics[width=0.9\linewidth]{figs/data_quality_figs_SiR/hDQ_IslandRate_TrendPlot}
   \end{subfigure}%
   \begin{subfigure}{0.5\textwidth}
-    \includegraphics[width=0.9\linewidth]{figs/sir/sir_amp}
+    \includegraphics[width=0.9\linewidth]{figs/data_quality_figs_SiR/hDQ_IslandAmplitude_SiR2-S_Nb80_TrendPlot}
   \end{subfigure}
   \caption{As a result of being in the target position, the SiR detector had very few hits in
     its thin component, and the amplitude distribution for the thick component had a peak
@@ -621,10 +611,10 @@ This can be seen in figure \ref{fig:sir_lqcd_setup}
 \begin{figure}
   \centering
   \begin{subfigure}{0.5\textwidth}
-    \includegraphics[width=0.9\linewidth]{figs/sir/pedestals}
+    \includegraphics[width=0.9\linewidth]{figs/data_quality_figs_SiR/hDQ_DAQPulseShapes_Pedestals_TrendPlot}
   \end{subfigure}%
   \begin{subfigure}{0.5\textwidth}
-    \includegraphics[width=0.9\linewidth]{figs/sir/lqsc_tdiff}
+    \includegraphics[width=0.9\linewidth]{figs/data_quality_figs_SiR/hDQ_muScTDiff_LiquidSc_Ng83_TrendPlot}
   \end{subfigure}
   \caption{The LiquidSc may not have been setup for the first tranche, leading to the above
     behavior. It there could have been a problem. Either way, somewhere in the deadtime something
@@ -644,10 +634,10 @@ have a peak. Whether or not this problem persists since the fix above has not be
 \begin{figure}
   \centering
   \begin{subfigure}{0.5\textwidth}
-    \includegraphics[width=0.9\linewidth]{figs/sir/ges_timestamp.png}
+    \includegraphics[width=0.9\linewidth]{figs/data_quality_figs_SiR/hDQ_IslandTimestamp_Ge-S_CaUH_TrendPlot}
   \end{subfigure}%
   \begin{subfigure}{0.5\textwidth}
-    \includegraphics[width=0.9\linewidth]{figs/sir/ges_tdiff}
+    \includegraphics[width=0.9\linewidth]{figs/data_quality_figs_SiR/hDQ_muScTDiff_Ge-S_CaUH_TrendPlot}
   \end{subfigure}
   \caption{On the left we see a problematic timestamp distribution, which has since been solved in \issue{45}.
     On the right we see a lack of a peak in the first tranche, and whether or not this problem persists has not
@@ -662,7 +652,7 @@ There were quite a few peaks in the GeF length distribution, as seen in \ref{fig
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.9\textwidth]{figs/sir/gef_length}
+  \includegraphics[width=0.9\textwidth]{figs/data_quality_figs_SiR/hDQ_IslandLength_Ge-F_Nh81_TrendPlot}
   \caption{The peaks in the length distribution of the GeF pulses
     are not understood.}
   \label{fig:sir_gef_length}
@@ -695,7 +685,7 @@ presented in \ref{fig:sir1pct_rates}.
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.9\textwidth]{figs/sir1pct/rates}
+  \includegraphics[width=0.9\textwidth]{figs/data_quality_figs_SiR2-1pct/hDQ_IslandRate_TrendPlot}
   \caption{This is presented just to show the absence of SiL1-2-F during this dataset.}
   \label{fig:sir1pct_rates}
 \end{figure}
@@ -723,7 +713,7 @@ See \ref{sec:sir1pct_missing_det} and figure \ref{fig:sir3pct_rates} for the evi
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.9\textwidth]{figs/sir3pct/rates}
+  \includegraphics[width=0.9\textwidth]{figs/data_quality_figs_SiR2-3pct/hDQ_IslandRate_TrendPlot}
   \caption{This is presented just to show the absence of SiL1-2-F during this dataset.}
   \label{fig:sir3pct_rates}
 \end{figure}
@@ -748,7 +738,7 @@ in figure \ref{fig:si16p_noise}.
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.9\textwidth]{figs/si16p/noise}
+  \includegraphics[width=0.9\textwidth]{figs/data_quality_figs_Si16P/hDQ_DAQPulseShapes_Noises_TrendPlot}
   \caption{The noise in the SiL1-2-F completely drowns out the noise in the other detectors on this plot.}
   \label{fig:si16p_noise}
 \end{figure}
@@ -762,10 +752,10 @@ higher. This should be looked into.
 \begin{figure}
   \centering
   \begin{subfigure}{0.5\textwidth}
-    \includegraphics[width=0.9\linewidth]{figs/si16p/sil2s_timestamp}
+    \includegraphics[width=0.9\linewidth]{figs/data_quality_figs_Si16P/hDQ_IslandTimestamp_SiL2-S_Na80_TrendPlot}
   \end{subfigure}%
   \begin{subfigure}{0.5\textwidth}
-    \includegraphics[width=0.9\linewidth]{figs/si16p/sir13s_timestamp}
+    \includegraphics[width=0.9\linewidth]{figs/data_quality_figs_Si16P/hDQ_IslandTimestamp_SiL1-3-S_Nc82_TrendPlot}
   \end{subfigure}
   \caption{Runs 3480, 3481, 3486, and 3487 seem to have higher rates, even normalized to the number of entering muons.}
   \label{fig:si16p_funnyruns}
